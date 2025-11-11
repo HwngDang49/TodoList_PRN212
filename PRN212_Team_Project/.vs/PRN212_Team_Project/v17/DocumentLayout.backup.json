@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.bll\\todolist_groupy.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\todolist_groupy.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|c:\\users\\asus\\desktop\\todolistproject\\prn212_team_project\\todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 72,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoListNotesDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:07:18.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TodoRepo.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:31:02.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "userRepo.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:31:19.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TodoService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "RelativeToolTip": "Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:31:34.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "RelativeToolTip": "Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:31:44.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "RelativeToolTip": "Todolist_GroupY\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-11T11:54:22.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
+              "RelativeToolTip": "Todolist_GroupY\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T11:52:16.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\DetailWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
+              "RelativeToolTip": "Todolist_GroupY\\DetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T12:09:39.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Todolist_GroupY.DAL",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "RelativeToolTip": "Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-11T11:55:49.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml",
+              "RelativeToolTip": "Todolist_GroupY\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-11T12:09:21.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Todolist_GroupY\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T11:52:15.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Todolist_GroupY.BLL",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "RelativeToolTip": "Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-11T11:53:15.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Todo.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:51:52.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\DetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
+              "RelativeToolTip": "Todolist_GroupY\\DetailWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:50:38.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "Todolist_GroupY\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:10:41.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Todolist_GroupY",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\Todolist_GroupY.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\TodolistProject\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "RelativeToolTip": "Todolist_GroupY\\Todolist_GroupY.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-11T11:53:18.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
