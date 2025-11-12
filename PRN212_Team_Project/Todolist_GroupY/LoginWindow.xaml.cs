@@ -25,6 +25,17 @@ namespace Todolist_GroupY
         public LoginWindow()
         {
             InitializeComponent();
+            LoadRememberedEmail();
+        }
+        private void LoadRememberedEmail()
+        {
+            // Lấy email đã lưu trong setting
+            string savedEmail = Properties.Settings.Default.RememberedEmail;
+            if (!string.IsNullOrWhiteSpace(savedEmail))
+            {
+                EmailTextBox.Text = savedEmail;
+                RememberCheckBox.IsChecked = true;
+            }
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -47,11 +58,23 @@ namespace Todolist_GroupY
                 MessageBox.Show("Invalidated password. Reset it, please!", "Wrong credentials", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            if (RememberCheckBox.IsChecked == true)
+            {
+                Properties.Settings.Default.RememberedEmail = email;
+            }
+            else
+            {
+                Properties.Settings.Default.RememberedEmail = string.Empty;
+            }
+            Properties.Settings.Default.Save();
             MainWindow main = new(acc.UserId);
             main.Show();
             this.Hide();
         }
 
+        private void RememberCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
