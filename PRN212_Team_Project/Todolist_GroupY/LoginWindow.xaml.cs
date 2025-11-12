@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,12 +70,17 @@ namespace Todolist_GroupY
             Properties.Settings.Default.Save();
             MainWindow main = new(acc.UserId);
             main.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void RememberCheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            e.Cancel = true; // Ngăn không cho cửa sổ đóng
+            this.Hide(); // Thay vào đó, ẩn cửa sổ
         }
     }
 }

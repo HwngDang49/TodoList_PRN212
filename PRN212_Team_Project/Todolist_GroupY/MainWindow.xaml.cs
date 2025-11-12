@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using Todolist_GroupY.BLL.Services;
 using Todolist_GroupY.DAL.Entities;
@@ -149,6 +150,12 @@ namespace Todolist_GroupY
 
             detail.ShowDialog();
             FillDataGrid(_service.GetTodosByUser(UserId));
+        }
+        // Override phương thức OnClosing để ngăn cửa sổ chính đóng lại
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            e.Cancel = true; // Ngăn không cho cửa sổ đóng
+            this.Hide(); // Thay vào đó, ẩn cửa sổ
         }
     }
 }
