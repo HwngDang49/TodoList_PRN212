@@ -13,13 +13,6 @@ namespace Todolist_GroupY
         private TodoService _service = new();
         public int UserId { get; set; }
         private List<Todo> _allTodos = new();
-        public MainWindow()
-        {
-            InitializeComponent();
-
-
-
-        }
         public MainWindow(int userId)
         {
             InitializeComponent();
@@ -28,15 +21,12 @@ namespace Todolist_GroupY
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Lấy toàn bộ Todo của user đang đăng nhập
-            _allTodos = _service.GetTodosByUser(UserId);
-
             //  Hiển thị tất cả lên DataGrid
-            FillDataGrid(_allTodos);
+            FillDataGrid(_service.GetTodosByUser(UserId));
 
             // Hiển thị ngày hôm nay
             TodayLabel.Content = DateTime.Now.ToString("dd/MM/yyyy");
-        }                                              
+        }
 
         public void FillDataGrid(List<Todo> bag)
         {
@@ -89,6 +79,77 @@ namespace Todolist_GroupY
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             ApplyFilters();
+        }
+
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Todo? selected = TodoDataGrid.SelectedItem as Todo;
+            if (selected == null)
+            {
+                MessageBox.Show("Please select a row before deleting", "Select one", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            MessageBoxResult answer = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (answer == MessageBoxResult.No)
+            {
+                return;
+            }
+
+            _service.DeleteTodos(selected);
+
+            FillDataGrid(_service.GetTodosByUser(UserId));
+        }
+
+        private void ViewDetailButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Todo? selected = TodoDataGrid.SelectedItem as Todo;
+            if (selected == null)
+            {
+                MessageBox.Show("Please select a row before deleting", "Select one", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            DetailWindow detail = new();
+            detail.IsView = selected;
+
+            detail.ShowDialog();
+
+            FillDataGrid(_service.GetTodosByUser(UserId));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            DetailWindow detail = new();
+            detail.LoggedInUser = UserId;
+
+            detail.ShowDialog();
+            FillDataGrid(_service.GetTodosByUser(UserId));
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Todo? selected = TodoDataGrid.SelectedItem as Todo;
+            Console.WriteLine(selected);
+            if (selected == null)
+            {
+                MessageBox.Show("Please select a row before deleting", "Select one", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            DetailWindow detail = new();
+
+            detail.EditedOne = selected;
+            detail.LoggedInUser = UserId;
+
+            detail.ShowDialog();
+            FillDataGrid(_service.GetTodosByUser(UserId));
         }
     }
 }
