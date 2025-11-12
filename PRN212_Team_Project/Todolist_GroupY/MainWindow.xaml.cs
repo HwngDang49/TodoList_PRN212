@@ -12,7 +12,6 @@ namespace Todolist_GroupY
     {
         private TodoService _service = new();
         public int UserId { get; set; }
-        private List<Todo> _allTodos = new();
         public MainWindow(int userId)
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace Todolist_GroupY
 
         private void ApplyFilters()
         {
-            IEnumerable<Todo> filtered = _allTodos;
+            IEnumerable<Todo> filtered = _service.GetTodosByUser(UserId);
 
             // 1 Lọc theo ngày
             if (FilterDatePicker.SelectedDate.HasValue)
