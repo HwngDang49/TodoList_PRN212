@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Todolist_GroupY"
         mc:Ignorable="d"
-Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Background="#B2DAE4">
+Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4" Loaded="Window_Loaded_1" >
     <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -40,8 +40,8 @@ Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="Center
 
         <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
             <CheckBox x:Name="CompletedCheckBox" Content="Đã hoàn thành" VerticalAlignment="Center" Margin="0,0,16,0"/>
-            <Button Content="Lưu" Width="90" Margin="0,0,8,0"  Background="#30BE71" Foreground="#FFFFFF"/>
-            <Button Content="Hủy" Width="90"  Background="#FF0000" Foreground="#FFFFFF"/>
+            <Button Content="Lưu" x:Name="SaveButton" Width="90" Margin="0,0,8,0"  Background="#30BE71" Foreground="#FFFFFF" Click="SaveButton_Click"/>
+            <Button Content="Hủy" x:Name="CancelButton" Width="90"  Background="#FF0000" Foreground="#FFFFFF"/>
         </StackPanel>
     </Grid>
 </Window>

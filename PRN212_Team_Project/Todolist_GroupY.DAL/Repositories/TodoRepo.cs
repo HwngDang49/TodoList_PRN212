@@ -38,5 +38,6 @@ namespace Todolist_GroupY.DAL.Repositories
             _ctx.Todos.Add(obj);
             _ctx.SaveChanges();
         }
+
     }
 }

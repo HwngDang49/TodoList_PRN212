@@ -32,7 +32,7 @@
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0">
                     <DatePicker x:Name="FilterDatePicker" Width="150"  Margin="0,0,10,0" SelectedDateChanged="FilterDatePicker_SelectedDateChanged"/>
                     <CheckBox x:Name="ShowCompletedCheckBox" Content="Hiện đã hoàn thành" Checked="ShowCompletedCheckBox_Checked" Unchecked="ShowCompletedCheckBox_Unchecked"/>
-                              
+
                 </StackPanel>
 
                 <!-- Search -->
@@ -51,10 +51,10 @@
             <DockPanel Grid.Column="0">
                 <!-- Actions -->
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,8">
-                    <Button Content="Thêm"  Padding="12,6" Margin="0,0,6,0" Background="#FF9E9E" Foreground="#FFFFFF"/>
-                    <Button Content="Sửa"  Padding="12,6" Margin="0,0,6,0" Background="#FA7305" Foreground="#FFFFFF"/>
-                    <Button Content="Xóa"  Padding="12,6" Margin="0,0,6,0" Background="#FF0000" Foreground="#FFFFFF"/>
-                    <Button Content="Hoàn thành"  Padding="12,6" Background="#30BE71" Foreground="#FFFFFF"/>
+                    <Button Content="Thêm" x:Name="CreateButton"  Padding="12,6" Margin="0,0,6,0" Background="#FF9E9E" Foreground="#FFFFFF" Width="60" Click="CreateButton_Click"/>
+                    <Button Content="Sửa" x:Name="UpdateButton" Padding="12,6" Margin="0,0,6,0" Background="#FA7305" Foreground="#FFFFFF" Width="62" Click="UpdateButton_Click"/>
+                    <Button Content="Xóa" x:Name="DeleteButton"  Padding="12,6" Margin="0,0,6,0" Background="#FF0000" Foreground="#FFFFFF" Width="60" Click="DeleteButton_Click"/>
+                    <Button Content="Chi Tiết" x:Name="ViewDetailButton"  Padding="12,6" Background="#30BE71" Foreground="#FFFFFF" RenderTransformOrigin="0.799,0.624" Width="75" Click="ViewDetailButton_Click_1"/>
                 </StackPanel>
 
                 <!-- DataGrid -->
