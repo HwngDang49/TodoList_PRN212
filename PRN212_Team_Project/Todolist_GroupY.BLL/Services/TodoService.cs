@@ -10,6 +10,11 @@ namespace Todolist_GroupY.BLL.Services
         {
             return _repo.GetAll();
         }
+        public List<Todo> GetTodosByUser(int userId)
+        {
+            return _repo.GetByUser(userId);
+        }
+
         public void DeleteTodos(Todo obj)
         {
             _repo.Delete(obj);

@@ -34,7 +34,7 @@ Title="Login" Height="320" Width="420" WindowStartupLocation="CenterScreen" Resi
         <CheckBox x:Name="RememberCheckBox" Grid.Row="6" Content="Remember me" Foreground="#252525" FontFamily="Nunito"/>
 
         <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="LoginButton" Content="Login" Width="100" Height="32"  Background="#FA7305" Foreground="#FFFFFF"/>
+            <Button x:Name="LoginButton" Content="Login" Width="100" Height="32"  Background="#FA7305" Foreground="#FFFFFF" Click="LoginButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

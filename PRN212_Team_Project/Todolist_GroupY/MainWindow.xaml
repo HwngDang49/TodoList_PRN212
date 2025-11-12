@@ -30,14 +30,14 @@
 
                 <!-- Filters (DatePicker + CheckBox) -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0">
-                    <DatePicker x:Name="FilterDatePicker" Width="150"  Margin="0,0,10,0"/>
-                    <CheckBox x:Name="ShowCompletedCheckBox" Content="Hiện đã hoàn thành"
-                              />
+                    <DatePicker x:Name="FilterDatePicker" Width="150"  Margin="0,0,10,0" SelectedDateChanged="FilterDatePicker_SelectedDateChanged"/>
+                    <CheckBox x:Name="ShowCompletedCheckBox" Content="Hiện đã hoàn thành" Checked="ShowCompletedCheckBox_Checked" Unchecked="ShowCompletedCheckBox_Unchecked"/>
+                              
                 </StackPanel>
 
                 <!-- Search -->
                 <DockPanel Grid.Column="3" VerticalAlignment="Center">
-                    <TextBox x:Name="SearchTextBox" Height="30" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="SearchTextBox" Height="30" VerticalContentAlignment="Center" TextChanged="SearchTextBox_TextChanged" />
                 </DockPanel>
             </Grid>
         </Border>
