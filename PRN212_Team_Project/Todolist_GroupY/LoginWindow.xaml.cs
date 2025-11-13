@@ -67,6 +67,7 @@ namespace Todolist_GroupY
             {
                 Properties.Settings.Default.RememberedEmail = string.Empty;
             }
+            App.CurrentUserId = acc.UserId;
             Properties.Settings.Default.Save();
             MainWindow main = new(acc.UserId);
             main.Show();

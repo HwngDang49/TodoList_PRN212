@@ -1,5 +1,5 @@
 ﻿using Todolist_GroupY.DAL.Entities;
-
+using System.Linq;
 namespace Todolist_GroupY.DAL.Repositories
 {
     public class TodoRepo
@@ -37,6 +37,23 @@ namespace Todolist_GroupY.DAL.Repositories
             _ctx = new();
             _ctx.Todos.Add(obj);
             _ctx.SaveChanges();
+        }
+        public List<Todo> GetPendingReminders(int userId)
+        {
+            //1 Tạo  DbContext mới
+            _ctx = new();
+            //2 Lấy thời gian hiện tại
+            DateTime now = DateTime.Now;
+
+            // [3] Query LINQ to Entities
+            return _ctx.Todos
+                .Where(x =>
+                    x.UserId == userId              // Của user này
+                    && x.IsCompleted == false       // Chưa hoàn thành
+                    && x.ReminderTime.HasValue      // Có set reminder
+                    && x.ReminderTime.Value <= now  // Đã tới giờ
+                )
+                .ToList();  // Execute query, trả về List<Todo>
         }
 
     }
