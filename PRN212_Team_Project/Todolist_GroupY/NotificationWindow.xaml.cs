@@ -51,10 +51,11 @@ namespace Todolist_GroupY
         {
             // Event này chạy SAU KHI window đã render xong
 
-            // [1] Đặt vị trí góc dưới bên phải
-            PositionWindow();
+            // ❌ KHÔNG GỌI PositionWindow() ở đây
+            // Vì NotificationManager đã quản lý positioning rồi
+            // Nếu gọi PositionWindow() sẽ ghi đè vị trí → tất cả notifications đều ở cùng 1 chỗ
 
-            // [2] Phát âm thanh
+            // Chỉ phát âm thanh
             SystemSounds.Asterisk.Play();
         }
         private void PositionWindow()

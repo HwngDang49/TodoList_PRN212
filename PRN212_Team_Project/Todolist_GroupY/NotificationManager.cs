@@ -38,10 +38,7 @@ namespace Todolist_GroupY
                 // [1] Tạo notification window mới
                 NotificationWindow notification = new NotificationWindow(todo);
 
-                // [2] Tính toán lại vị trí tất cả notifications
-                RepositionNotifications();
-
-                // [3] Đăng ký event khi notification đóng
+                // [2] Đăng ký event khi notification đóng
                 notification.Closed += (s, e) =>
                 {
                     // Xóa khỏi list
@@ -51,8 +48,11 @@ namespace Todolist_GroupY
                     RepositionNotifications();
                 };
 
-                // [4] Thêm vào list active
+                // [3] Thêm vào list active TRƯỚC KHI reposition
                 _activeNotifications.Add(notification);
+
+                // [4] Tính toán lại vị trí tất cả notifications (bao gồm cái mới)
+                RepositionNotifications();
 
                 // [5] Hiển thị window
                 notification.Show();

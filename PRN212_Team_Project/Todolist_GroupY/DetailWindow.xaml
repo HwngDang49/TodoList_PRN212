@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Todolist_GroupY"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4" Loaded="Window_Loaded_1" >
+Title="Chi tiết việc" Height="420" Width="572" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4" Loaded="Window_Loaded_1" >
     <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
