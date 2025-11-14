@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Todolist_GroupY.BLL.Services;
 using Todolist_GroupY.DAL.Entities;
+using Todolist_GroupY.Events;
 
 namespace Todolist_GroupY
 {
@@ -12,7 +13,9 @@ namespace Todolist_GroupY
     public partial class MainWindow : Window
     {
         private TodoService _service = new();
+        private TodoEventBus _eventBus = TodoEventBus.Instance;
         public int UserId { get; set; }
+
         public MainWindow(int userId)
         {
             InitializeComponent();
@@ -26,6 +29,9 @@ namespace Todolist_GroupY
 
             // Hiển thị ngày hôm nay
             TodayLabel.Content = DateTime.Now.ToString("dd/MM/yyyy");
+
+            // Subscribe to TodoChanged event để auto-refresh
+            _eventBus.Subscribe(OnTodoChanged);
         }
 
         public void FillDataGrid(List<Todo> bag)
@@ -99,6 +105,10 @@ namespace Todolist_GroupY
 
             _service.DeleteTodos(selected);
 
+            // Publish event để trigger auto-refresh (nếu có MainWindow khác đang mở)
+            _eventBus.PublishTodoChanged(TodoChangeType.Deleted, UserId, selected.TodoId);
+
+            // Manual refresh cho window hiện tại
             FillDataGrid(_service.GetTodosByUser(UserId));
         }
 
@@ -154,8 +164,38 @@ namespace Todolist_GroupY
         // Override phương thức OnClosing để ngăn cửa sổ chính đóng lại
         protected override void OnClosing(CancelEventArgs e)
         {
+            // Unsubscribe event để tránh memory leak
+            _eventBus.Unsubscribe(OnTodoChanged);
+
             e.Cancel = true; // Ngăn không cho cửa sổ đóng
             this.Hide(); // Thay vào đó, ẩn cửa sổ
+        }
+
+        /// <summary>
+        /// Event handler khi có Todo thay đổi
+        /// Được gọi từ TodoEventBus khi bất kỳ component nào publish TodoChanged event
+        /// </summary>
+        private void OnTodoChanged(object? sender, TodoChangedEventArgs e)
+        {
+            // Chỉ refresh nếu thay đổi thuộc về user hiện tại
+            if (e.UserId == UserId)
+            {
+                // Sử dụng Dispatcher để đảm bảo chạy trên UI thread
+                Dispatcher.Invoke(() =>
+                {
+                    RefreshGrid();
+                });
+            }
+        }
+
+        /// <summary>
+        /// Refresh DataGrid với data mới từ database
+        /// Giữ nguyên filter hiện tại
+        /// </summary>
+        public void RefreshGrid()
+        {
+            // Apply filters sẽ tự động query database và update grid
+            ApplyFilters();
         }
     }
 }

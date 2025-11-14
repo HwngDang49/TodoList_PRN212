@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Todolist_GroupY.BLL.Services;
 using Todolist_GroupY.DAL.Entities;
+using Todolist_GroupY.Events;
 
 namespace Todolist_GroupY
 {
@@ -27,6 +28,9 @@ namespace Todolist_GroupY
 
         // Service để update todo
         private TodoService _todoService = new();
+
+        // Event bus để publish TodoChanged event
+        private TodoEventBus _eventBus = TodoEventBus.Instance;
 
         public NotificationWindow(Todo todo)
         {
@@ -77,6 +81,9 @@ namespace Todolist_GroupY
                 //xóa user khỏi Hashset để có thể nhắc lại
                 ReminderService.Instance.RemoveNotifiedTodoId(_todo.TodoId);
 
+                // Publish event để MainWindow auto-refresh
+                _eventBus.PublishTodoChanged(TodoChangeType.Snoozed, _todo.UserId, _todo.TodoId);
+
                 // Thông báo cho user
                 MessageBox.Show("Đã hoãn reminder 5 phút!", "Snooze",
                     MessageBoxButton.OK, MessageBoxImage.Information);
@@ -92,6 +99,9 @@ namespace Todolist_GroupY
 
             // Update vào database
             _todoService.UpdateTodos(_todo);
+
+            // Publish event để MainWindow auto-refresh
+            _eventBus.PublishTodoChanged(TodoChangeType.Completed, _todo.UserId, _todo.TodoId);
 
             // Thông báo cho user
             MessageBox.Show("Task đã hoàn thành!", "Complete",

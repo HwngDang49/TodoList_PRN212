@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Todolist_GroupY"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
 Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4" Loaded="Window_Loaded_1" >
     <Grid Margin="16">
@@ -28,13 +29,23 @@ Title="Chi tiết việc" Height="420" Width="520" WindowStartupLocation="Center
         </StackPanel>
 
         <StackPanel Grid.Row="6" Orientation="Horizontal">
-            <StackPanel Width="200" Margin="0,0,8,0">
+            <StackPanel Width="240" Margin="0,0,8,0">
                 <TextBlock Text="Hạn"/>
-                <DatePicker x:Name="DueDatePicker"/>
+                <xctk:DateTimePicker x:Name="DueDatePicker"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
             </StackPanel>
-            <StackPanel Width="200">
+            <StackPanel Width="240">
                 <TextBlock Text="Nhắc lúc"/>
-                <DatePicker x:Name="ReminderDatePicker"/>
+                <xctk:DateTimePicker x:Name="ReminderDatePicker"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
             </StackPanel>
         </StackPanel>
 

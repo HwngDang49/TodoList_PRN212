@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Todolist_GroupY.BLL.Services;
 using Todolist_GroupY.DAL.Entities;
+using Todolist_GroupY.Events;
 
 namespace Todolist_GroupY
 {
@@ -10,6 +11,8 @@ namespace Todolist_GroupY
     public partial class DetailWindow : Window
     {
         private TodoService _todoService = new(); //save
+        private TodoEventBus _eventBus = TodoEventBus.Instance;
+
         public Todo EditedOne { get; set; }
         public Todo IsView { get; set; }
 
@@ -28,8 +31,8 @@ namespace Todolist_GroupY
                 //fill data từ selected vào các ô nhập
                 TitleTextBox.Text = EditedOne.Title.ToString();
                 DescTextBox.Text = EditedOne.Description;
-                DueDatePicker.Text = EditedOne.DueDate.ToString();
-                ReminderDatePicker.Text = EditedOne.ReminderTime.ToString();
+                DueDatePicker.Value = EditedOne.DueDate;
+                ReminderDatePicker.Value = EditedOne.ReminderTime;
                 CompletedCheckBox.IsChecked = EditedOne.IsCompleted;
             }
             if (IsView != null)
@@ -38,8 +41,8 @@ namespace Todolist_GroupY
                 //fill data từ selected vào các ô nhập
                 TitleTextBox.Text = IsView.Title.ToString();
                 DescTextBox.Text = IsView.Description;
-                DueDatePicker.Text = IsView.DueDate.ToString();
-                ReminderDatePicker.Text = IsView.ReminderTime.ToString();
+                DueDatePicker.Value = IsView.DueDate;
+                ReminderDatePicker.Value = IsView.ReminderTime;
                 CompletedCheckBox.IsChecked = IsView.IsCompleted;
                 //disable tất cả ô nhập
                 TitleTextBox.IsEnabled = false;
@@ -59,29 +62,46 @@ namespace Todolist_GroupY
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            Todo obj = new Todo() { };
-            if (EditedOne != null)
+            try
             {
-                obj.TodoId = EditedOne.TodoId;
+                Todo obj = new Todo() { };
+                if (EditedOne != null)
+                {
+                    obj.TodoId = EditedOne.TodoId;
+                }
+                obj.UserId = LoggedInUser;
+                obj.Title = TitleTextBox.Text;
+                obj.Description = DescTextBox.Text;
+                obj.DueDate = DueDatePicker.Value;
+                obj.ReminderTime = ReminderDatePicker.Value;
+                obj.IsCompleted = CompletedCheckBox.IsChecked ?? false;
+
+                // Xác định loại thay đổi
+                TodoChangeType changeType;
+
+                if (EditedOne != null)
+                {
+                    // Update existing todo
+                    _todoService.UpdateTodos(obj);
+                    changeType = TodoChangeType.Updated;
+                }
+                else
+                {
+                    // Create new todo
+                    _todoService.CreateTodos(obj);
+                    changeType = TodoChangeType.Created;
+                }
+
+                // Publish event để MainWindow auto-refresh
+                _eventBus.PublishTodoChanged(changeType, LoggedInUser, obj.TodoId);
+
+                this.Close();
             }
-            obj.UserId = LoggedInUser;
-            obj.Title = TitleTextBox.Text;
-            obj.Description = DescTextBox.Text;
-            obj.DueDate = DateTime.Parse(DueDatePicker.Text);
-            obj.ReminderTime = DateTime.Parse(ReminderDatePicker.Text);
-            obj.IsCompleted = CompletedCheckBox.IsChecked ?? false;
-
-
-            if (EditedOne != null)
+            catch (Exception ex)
             {
-                _todoService.UpdateTodos(obj);
+                MessageBox.Show($"Lỗi khi lưu: {ex.Message}", "Lỗi",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else
-            {
-                _todoService.CreateTodos(obj);
-            }
-
-            this.Close();
         }
     }
 }
