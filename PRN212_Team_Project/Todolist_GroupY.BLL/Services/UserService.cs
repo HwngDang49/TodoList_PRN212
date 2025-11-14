@@ -10,5 +10,10 @@ namespace Todolist_GroupY.BLL.Services
         {
             return _repo.FindByEmail(email);
         }
+        public void RegisterUser(User user)
+        {
+            // Hàm này gọi hàm Create của Repo
+            _repo.Create(user);
+        }
     }
 }

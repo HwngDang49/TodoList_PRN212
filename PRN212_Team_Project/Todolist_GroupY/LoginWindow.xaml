@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Todolist_GroupY"
         mc:Ignorable="d"
-Title="Login" Height="320" Width="420" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4">
+Title="Login" Height="350" Width="481" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4">
     <Grid Margin="24">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -35,6 +35,8 @@ Title="Login" Height="320" Width="420" WindowStartupLocation="CenterScreen" Resi
 
         <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="LoginButton" Content="Login" Width="100" Height="32"  Background="#FA7305" Foreground="#FFFFFF" Click="LoginButton_Click"/>
+            <Button x:Name="RegisterButton" Content="Register" Width="100" Height="32" Background="#30BE71" Foreground="#FFFFFF" Click="RegisterButton_Click" Margin="8,0,0,0"/>
+
         </StackPanel>
     </Grid>
 </Window>

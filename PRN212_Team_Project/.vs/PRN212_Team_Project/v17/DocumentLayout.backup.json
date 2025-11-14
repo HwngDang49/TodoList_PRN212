@@ -1,97 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\",
+  "WorkspaceRootPath": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy\\todolist_groupy.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\todolist_groupy.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\todolist_groupy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy\\todolist_groupy.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\todolist_groupy.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\prn212\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\todolist_groupy.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|d:\\groupproject_prn\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\todolist_groupy.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\todolist_groupy.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -102,15 +102,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 72,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 22,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f6c90d9a-1aa8-32e5-baac-467b7262213c}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "icon.ico - Icon [256x256, 32 bit, PNG]",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\icon.ico",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\icon.ico",
               "RelativeDocumentMoniker": "Todolist_GroupY\\icon.ico",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\icon.ico - Icon [256x256, 32 bit, PNG]",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\icon.ico - Icon [256x256, 32 bit, PNG]",
               "RelativeToolTip": "Todolist_GroupY\\icon.ico - Icon [256x256, 32 bit, PNG]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
               "WhenOpened": "2025-11-12T15:21:59.103Z",
@@ -118,76 +146,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Todolist_GroupY\\App.xaml.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml.cs",
-              "RelativeToolTip": "Todolist_GroupY\\App.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T14:07:19.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
               "RelativeToolTip": "Todolist_GroupY\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAuwJ0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAuwJsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T11:52:15.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:52:15.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY\\LoginWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml.cs",
               "RelativeToolTip": "Todolist_GroupY\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwEYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAQwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T12:10:41.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\App.xaml.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml.cs",
+              "RelativeToolTip": "Todolist_GroupY\\App.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T14:07:19.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY\\AssemblyInfo.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\AssemblyInfo.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\AssemblyInfo.cs",
               "RelativeToolTip": "Todolist_GroupY\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T13:38:35.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T13:38:35.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
               "RelativeDocumentMoniker": "Todolist_GroupY\\appsettings.json",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
               "RelativeToolTip": "Todolist_GroupY\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-11T11:54:22.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:54:22.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml",
               "RelativeDocumentMoniker": "Todolist_GroupY\\App.xaml",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\App.xaml",
               "RelativeToolTip": "Todolist_GroupY\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-11T14:46:19.476Z",
@@ -195,36 +219,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Todolist_GroupY.DAL.csproj",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-11T11:55:49.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:55:49.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
               "RelativeToolTip": "Todolist_GroupY\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-11T11:52:16.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:52:16.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "TodoService.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Services\\TodoService.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\TodoService.cs",
               "RelativeToolTip": "Todolist_GroupY.BLL\\Services\\TodoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -232,35 +254,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Todolist_GroupY.csproj",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
               "RelativeDocumentMoniker": "Todolist_GroupY\\Todolist_GroupY.csproj",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
               "RelativeToolTip": "Todolist_GroupY\\Todolist_GroupY.csproj",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-11T11:53:18.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:53:18.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "DetailWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
               "RelativeDocumentMoniker": "Todolist_GroupY\\DetailWindow.xaml",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
               "RelativeToolTip": "Todolist_GroupY\\DetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-11T12:09:39.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "TodoRepo.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -268,11 +289,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "DetailWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY\\DetailWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml.cs",
               "RelativeToolTip": "Todolist_GroupY\\DetailWindow.xaml.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAxwEEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -280,46 +301,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Services\\UserService.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
               "RelativeToolTip": "Todolist_GroupY.BLL\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:31:44.618Z"
+              "WhenOpened": "2025-11-11T13:31:44.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "Todolist_GroupY\\LoginWindow.xaml",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml",
-              "RelativeToolTip": "Todolist_GroupY\\LoginWindow.xaml",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\LoginWindow.xaml*",
+              "RelativeToolTip": "Todolist_GroupY\\LoginWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-11T12:09:21.636Z"
+              "WhenOpened": "2025-11-11T12:09:21.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "userRepo.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:31:19.908Z"
+              "WhenOpened": "2025-11-11T13:31:19.908Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "TodoListNotesDbContext.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\TodoListNotesDbContext.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -329,9 +353,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Note.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Note.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Note.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\Note.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Note.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Note.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\Note.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -341,9 +365,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\User.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\User.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\User.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\User.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -353,34 +377,32 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "Todolist_GroupY",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
               "RelativeDocumentMoniker": "Todolist_GroupY\\Todolist_GroupY.csproj",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\Todolist_GroupY.csproj",
               "RelativeToolTip": "Todolist_GroupY\\Todolist_GroupY.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-12T02:41:55.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T02:41:55.496Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "Todolist_GroupY.BLL.csproj",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
               "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
               "RelativeToolTip": "Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-11T11:53:15.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T11:53:15.028Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "Todo.cs",
-              "DocumentMoniker": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "DocumentMoniker": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
-              "ToolTip": "D:\\PRN212\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
+              "ToolTip": "D:\\GroupProject_PRN\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

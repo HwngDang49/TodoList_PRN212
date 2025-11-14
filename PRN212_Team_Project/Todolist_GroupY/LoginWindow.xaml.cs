@@ -73,6 +73,42 @@ namespace Todolist_GroupY
             main.Show();
             this.Close();
         }
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            string email = EmailTextBox.Text;
+            string pass = PasswordBox.Password;
+
+            // 1. Validation (Kiểm tra trống)
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(pass))
+            {
+                MessageBox.Show("Vui lòng nhập email và mật khẩu để đăng ký!", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // 2. Kiểm tra email đã tồn tại chưa (dùng lại hàm Authenticate)
+            User? acc = _service.Authenticate(email);
+            if (acc != null)
+            {
+                MessageBox.Show("Email này đã tồn tại. Vui lòng nhấn 'Login'.", "Lỗi Đăng Ký", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // 3. Tạo User mới
+            // Lấy phần trước @ làm UserName mặc định, nếu không có @ thì dùng email làm username
+            string username = email.Contains("@") ? email.Split('@')[0] : email;
+
+            User newUser = new User
+            {
+                UserName = username,
+                Email = email,
+                Password = pass // LƯU Ý: Bạn đang lưu mật khẩu text
+            };
+
+            // 4. Gọi Service để lưu vào DB
+            _service.RegisterUser(newUser);
+
+            MessageBox.Show("Đăng ký tài khoản thành công! Bây giờ bạn có thể nhấn 'Login' để đăng nhập.", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
         private void RememberCheckBox_Checked(object sender, RoutedEventArgs e)
         {
