@@ -11,20 +11,28 @@
       "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF69FA80-4C6D-4CDB-B1AA-DD626C60EEEA}|Todolist_GroupY.BLL\\Todolist_GroupY.BLL.csproj|solutionrelative:todolist_groupy.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\todorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,20 +43,12 @@
       "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FB31FB32-50B7-4B2D-B7EF-B8878B4F16C5}|Todolist_GroupY\\Todolist_GroupY.csproj|solutionrelative:todolist_groupy\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|solutionrelative:todolist_groupy.dal\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF3557C-1112-4D62-85E2-809A45B98A72}|Todolist_GroupY.DAL\\Todolist_GroupY.DAL.csproj|e:\\cabinet\\github\\todolist_prn212\\prn212_team_project\\todolist_groupy.dal\\entities\\todolistnotesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,19 +126,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml",
-              "ToolTip": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml",
-              "RelativeToolTip": "Todolist_GroupY\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-11T11:52:16.939Z",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "RelativeDocumentMoniker": "Todolist_GroupY\\appsettings.json",
+              "ToolTip": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\appsettings.json",
+              "RelativeToolTip": "Todolist_GroupY\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-15T13:43:51.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "userRepo.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
@@ -146,8 +147,7 @@
               "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\userRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:31:19.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T13:31:19.908Z"
             },
             {
               "$type": "Document",
@@ -163,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY\\MainWindow.xaml.cs",
@@ -176,19 +176,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "DetailWindow.xaml",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
               "RelativeDocumentMoniker": "Todolist_GroupY\\DetailWindow.xaml",
               "ToolTip": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY\\DetailWindow.xaml",
               "RelativeToolTip": "Todolist_GroupY\\DetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-11T12:09:39.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T12:09:39.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TodoRepo.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
@@ -196,8 +195,7 @@
               "RelativeToolTip": "Todolist_GroupY.DAL\\Repositories\\TodoRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:31:02.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T13:31:02.712Z"
             },
             {
               "$type": "Document",
@@ -226,13 +224,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.BLL\\Services\\UserService.cs",
               "ToolTip": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.BLL\\Services\\UserService.cs",
               "RelativeToolTip": "Todolist_GroupY.BLL\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T13:31:44.618Z",
               "EditorCaption": ""
@@ -251,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Note.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Note.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\Note.cs",
@@ -259,12 +257,11 @@
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\Note.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T14:46:27.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T14:46:27.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\User.cs",
@@ -276,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Todo.cs",
               "DocumentMoniker": "E:\\Cabinet\\Github\\TodoList_PRN212\\PRN212_Team_Project\\Todolist_GroupY.DAL\\Entities\\Todo.cs",
               "RelativeDocumentMoniker": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
@@ -284,7 +281,8 @@
               "RelativeToolTip": "Todolist_GroupY.DAL\\Entities\\Todo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:51:52.25Z"
+              "WhenOpened": "2025-11-11T13:51:52.25Z",
+              "EditorCaption": ""
             }
           ]
         },
