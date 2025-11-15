@@ -26,18 +26,19 @@ namespace Todolist_GroupY
         public LoginWindow()
         {
             InitializeComponent();
-            LoadRememberedEmail();
+            //LoadRememberedEmail();
         }
-        private void LoadRememberedEmail()
-        {
-            // Lấy email đã lưu trong setting
-            string savedEmail = Properties.Settings.Default.RememberedEmail;
-            if (!string.IsNullOrWhiteSpace(savedEmail))
-            {
-                EmailTextBox.Text = savedEmail;
-                RememberCheckBox.IsChecked = true;
-            }
-        }
+
+        //private void LoadRememberedEmail()
+        //{
+        //    // Lấy email đã lưu trong setting
+        //    string savedEmail = Properties.Settings.Default.RememberedEmail;
+        //    if (!string.IsNullOrWhiteSpace(savedEmail))
+        //    {
+        //        EmailTextBox.Text = savedEmail;
+        //        RememberCheckBox.IsChecked = true;
+        //    }
+        //}
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -59,65 +60,67 @@ namespace Todolist_GroupY
                 MessageBox.Show("Invalidated password. Reset it, please!", "Wrong credentials", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (RememberCheckBox.IsChecked == true)
-            {
-                Properties.Settings.Default.RememberedEmail = email;
-            }
-            else
-            {
-                Properties.Settings.Default.RememberedEmail = string.Empty;
-            }
+            //if (RememberCheckBox.IsChecked == true)
+            //{
+            //    Properties.Settings.Default.RememberedEmail = email;
+            //}
+            //else
+            //{
+            //    Properties.Settings.Default.RememberedEmail = string.Empty;
+            //}
             App.CurrentUserId = acc.UserId;
             Properties.Settings.Default.Save();
             MainWindow main = new(acc.UserId);
             main.Show();
             this.Close();
         }
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            string email = EmailTextBox.Text;
-            string pass = PasswordBox.Password;
 
-            // 1. Validation (Kiểm tra trống)
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(pass))
-            {
-                MessageBox.Show("Vui lòng nhập email và mật khẩu để đăng ký!", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+        //private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string email = EmailTextBox.Text;
+        //    string pass = PasswordBox.Password;
 
-            // 2. Kiểm tra email đã tồn tại chưa (dùng lại hàm Authenticate)
-            User? acc = _service.Authenticate(email);
-            if (acc != null)
-            {
-                MessageBox.Show("Email này đã tồn tại. Vui lòng nhấn 'Login'.", "Lỗi Đăng Ký", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+        //    // 1. Validation (Kiểm tra trống)
+        //    if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(pass))
+        //    {
+        //        MessageBox.Show("Vui lòng nhập email và mật khẩu để đăng ký!", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+        //        return;
+        //    }
 
-            // 3. Tạo User mới
-            // Lấy phần trước @ làm UserName mặc định, nếu không có @ thì dùng email làm username
-            string username = email.Contains("@") ? email.Split('@')[0] : email;
+        //    // 2. Kiểm tra email đã tồn tại chưa (dùng lại hàm Authenticate)
+        //    User? acc = _service.Authenticate(email);
+        //    if (acc != null)
+        //    {
+        //        MessageBox.Show("Email này đã tồn tại. Vui lòng nhấn 'Login'.", "Lỗi Đăng Ký", MessageBoxButton.OK, MessageBoxImage.Error);
+        //        return;
+        //    }
 
-            User newUser = new User
-            {
-                UserName = username,
-                Email = email,
-                Password = pass // LƯU Ý: Bạn đang lưu mật khẩu text
-            };
+        //    // 3. Tạo User mới
+        //    // Lấy phần trước @ làm UserName mặc định, nếu không có @ thì dùng email làm username
+        //    string username = email.Contains("@") ? email.Split('@')[0] : email;
 
-            // 4. Gọi Service để lưu vào DB
-            _service.RegisterUser(newUser);
+        //    User newUser = new User
+        //    {
+        //        UserName = username,
+        //        Email = email,
+        //        Password = pass // LƯU Ý: Bạn đang lưu mật khẩu text
+        //    };
 
-            MessageBox.Show("Đăng ký tài khoản thành công! Bây giờ bạn có thể nhấn 'Login' để đăng nhập.", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
+        //    // 4. Gọi Service để lưu vào DB
+        //    _service.RegisterUser(newUser);
 
-        private void RememberCheckBox_Checked(object sender, RoutedEventArgs e)
-        {
+        //    MessageBox.Show("Đăng ký tài khoản thành công! Bây giờ bạn có thể nhấn 'Login' để đăng nhập.", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
+        //}
 
-        }
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            e.Cancel = true; // Ngăn không cho cửa sổ đóng
-            this.Hide(); // Thay vào đó, ẩn cửa sổ
-        }
+        //private void RememberCheckBox_Checked(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        //protected override void OnClosing(CancelEventArgs e)
+        //{
+        //    e.Cancel = true; // Ngăn không cho cửa sổ đóng
+        //    this.Hide(); // Thay vào đó, ẩn cửa sổ
+        //}
     }
 }

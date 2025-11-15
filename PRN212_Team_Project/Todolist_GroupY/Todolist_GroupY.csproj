@@ -10,6 +10,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Assets\Liquid.mp4" />
+	  <None Remove="Assets\Logo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Todolist_GroupY.BLL\Todolist_GroupY.BLL.csproj">
 			<Private>True</Private>
 		</ProjectReference>
@@ -27,6 +32,12 @@
 		<None Update="appsettings.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
+		<Resource Include="Assets\Liquid.mp4">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Assets\Logo.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
 		<Resource Include="icon.ico">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Resource>
