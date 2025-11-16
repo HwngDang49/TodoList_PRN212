@@ -10,7 +10,12 @@ namespace TodoApp.BLL.Services
 {
     public class UserService
     {
-        private UserRepository _repo = new();
+        private readonly UserRepository _repo;
+
+        public UserService(UserRepository repo)
+        {
+            _repo = repo;
+        }
 
         /*
         *  SignUp 

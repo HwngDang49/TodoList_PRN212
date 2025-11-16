@@ -9,21 +9,33 @@ namespace TodoApp.DAL.Repositories
 {
     public class TodoRepository : IRepository<Todo>
     {
+        private TodoDbContext _db;
+
+        public TodoRepository(TodoDbContext db)
+        {
+            _db = db;
+        }
 
         /*
         *  Create 
         */
-        public void Create(Todo entity)
+        public Todo Create(Todo todo)
         {
-            throw new NotImplementedException();
+            _db = new();
+            _db.Todos.Add(todo);
+            _db.SaveChanges();
+            return todo;
         }
 
         /*
         *  Delete 
         */
-        public void Delete(Guid id)
+        public bool Delete(Guid id)
         {
-            throw new NotImplementedException();
+            _db = new();
+            _db.Remove(id);
+            _db.SaveChanges();
+            return true;
         }
 
         /*
@@ -39,23 +51,37 @@ namespace TodoApp.DAL.Repositories
         */
         public List<Todo> GetAll()
         {
-            throw new NotImplementedException();
+            _db = new();
+            return _db.Todos.ToList();
+        }
+
+        /*
+        *  Get By UserId 
+        */
+        public List<Todo> GetByUserId(Guid userId)
+        {
+            _db = new();
+            return _db.Todos.Where(t => t.UserId == userId).ToList();
         }
 
         /*
         *  Get By Id 
         */
-        public Todo GetById(Guid id)
+        public Todo? GetById(Guid id)
         {
-            throw new NotImplementedException();
+            _db = new();
+            return _db.Todos.FirstOrDefault(x => x.TodoId == id);
         }
 
         /*
         *  Update 
         */
-        public void Update(Todo entity)
+        public bool Update(Todo todo)
         {
-            throw new NotImplementedException();
+            _db = new();
+            _db.Todos.Update(todo);
+            _db.SaveChanges();
+            return true;
         }
     }
 }

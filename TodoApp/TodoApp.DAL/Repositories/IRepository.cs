@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TodoApp.DAL.Entities;
 
 namespace TodoApp.DAL.Repositories
 {
@@ -10,9 +11,9 @@ namespace TodoApp.DAL.Repositories
     {
         T GetById(Guid id);
         List<T> GetAll();
-        void Create(T entity);
-        void Update(T entity);
-        void Delete(Guid id);
+        T Create(T entity);
+        bool Update(T entity);
+        bool Delete(Guid id);
         void DeleteAll();
     }
 }

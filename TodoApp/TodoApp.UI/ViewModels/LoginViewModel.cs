@@ -56,7 +56,7 @@ namespace TodoApp.UI.ViewModels
 
             if (user != null)
             {
-                _nav.NavigateTo(new TodoViewModel());
+                _nav.NavigateTo(new TodoViewModel(_nav, user));
             }
             else
             {

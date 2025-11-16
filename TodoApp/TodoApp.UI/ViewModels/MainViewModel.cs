@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TodoApp.BLL.Services;
+using TodoApp.DAL;
+using TodoApp.DAL.Repositories;
 using TodoApp.UI.Services;
 
 namespace TodoApp.UI.ViewModels
@@ -28,7 +30,9 @@ namespace TodoApp.UI.ViewModels
             NavService = new NavigationService();
             NavService.Navigate = (vm) => CurrentViewModel = vm;
 
-            var userService = new UserService();
+            var db = new TodoDbContext();
+            var userRepo = new UserRepository(db);
+            var userService = new UserService(userRepo);
 
             CurrentViewModel = new LoginViewModel(NavService, userService);
         }

@@ -9,26 +9,31 @@ namespace TodoApp.DAL.Repositories
 {
     public class UserRepository : IRepository<User>
     {
-        private TodoDbContext _db;
+        private readonly TodoDbContext _db;
+
+        public UserRepository(TodoDbContext db)
+        {
+            _db = db;
+        }
 
         /*
         *  Create  
         */
-        public void Create(User entity)
+        public User Create(User user)
         {
-            _db = new();
-            _db.Users.Add(entity);
+            _db.Users.Add(user);
             _db.SaveChanges();
+            return user;
         }
 
         /*
         *  Delete  
         */
-        public void Delete(Guid id)
+        public bool Delete(Guid id)
         {
-            _db = new();
             _db.Remove(id);
             _db.SaveChanges();
+            return true;
         }
 
         /*
@@ -44,13 +49,11 @@ namespace TodoApp.DAL.Repositories
         */
         public List<User> GetAll()
         {
-            _db = new();
             return _db.Users.ToList();
         }
 
         public User? GetById(Guid id)
         {
-            _db = new();
             return _db.Users.FirstOrDefault(x => x.UserId == id);
         }
 
@@ -59,7 +62,6 @@ namespace TodoApp.DAL.Repositories
         */
         public User? GetByEmail(string email)
         {
-            _db = new();
             return _db.Users.FirstOrDefault(u => u.Email == email);
         }
 
@@ -68,18 +70,17 @@ namespace TodoApp.DAL.Repositories
         */
         public User? GetByEmailPassword(string email, string password)
         {
-            _db = new();
             return _db.Users.FirstOrDefault(u => u.Email == email && u.PasswordHash == password);
         }
 
         /*
         *  Update 
         */
-        public void Update(User user)
+        public bool Update(User user)
         {
-            _db = new();
             _db.Users.Update(user);
             _db.SaveChanges();
+            return true;
         }
     }
 }
