@@ -5,9 +5,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:TodoApp.UI.Views"
+    xmlns:converters="clr-namespace:TodoApp.UI.Converters"
     mc:Ignorable="d"
     d:DesignHeight="900"
     d:DesignWidth="1450">
+
+    <UserControl.Resources>
+        <converters:NullToVisibilityConverter
+            x:Key="NullToVisibilityConverter" />
+        <BooleanToVisibilityConverter
+            x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
     <Grid
         Margin="24">
         <Grid.ColumnDefinitions>
@@ -89,6 +98,7 @@
                             Tag="All"
                             Height="40"
                             Margin="0,0,0,8"
+                            Cursor="Hand"
                             HorizontalContentAlignment="Left"
                             Padding="12,0"
                             Background="White"
@@ -138,6 +148,7 @@
                                         Margin="0,0,0,8"
                                         HorizontalContentAlignment="Left"
                                         Padding="12,0"
+                                        Cursor="Hand"
                                         Background="White"
                                         BorderThickness="0"
                                         Command="{Binding DataContext.FilterByCategoryCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
@@ -181,6 +192,7 @@
                             Content="+ Add Category"
                             Height="40"
                             Margin="0,12,0,0"
+                            Cursor="Hand"
                             HorizontalContentAlignment="Center"
                             Background="Transparent"
                             BorderBrush="#CCC"
@@ -228,38 +240,12 @@
                     Height="40"
                     Margin="0,12,0,0"
                     Background="#E74C3C"
-                    Foreground="White"
+                    Foreground="Black"
+                    Cursor="Hand"
                     BorderThickness="0"
-                    Command="{Binding LogoutCommand}">
-                    <Button.Style>
-                        <Style
-                            TargetType="Button">
-                            <Setter
-                                Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate
-                                        TargetType="Button">
-                                        <Border
-                                            Background="{TemplateBinding Background}"
-                                            CornerRadius="6">
-                                            <ContentPresenter
-                                                HorizontalAlignment="Center"
-                                                VerticalAlignment="Center" />
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                            <Style.Triggers>
-                                <Trigger
-                                    Property="IsMouseOver"
-                                    Value="True">
-                                    <Setter
-                                        Property="Background"
-                                        Value="#C0392B" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+                    Command="{Binding LogoutCommand}"
+                    Style="{StaticResource Button}">
+                    
                 </Button>
             </Grid>
         </Border>
@@ -350,6 +336,7 @@
                         Width="100"
                         Background="Black"
                         Foreground="White"
+                        Cursor="Hand"
                         BorderThickness="0"
                         FontWeight="SemiBold"
                         Command="{Binding AddTodoCommand}">
@@ -463,13 +450,13 @@
                                             Orientation="Horizontal"
                                             Margin="0,4,0,0">
                                             <TextBlock
-                                                Text="{Binding CategoryName}"
+                                                Text="{Binding Name}"
                                                 FontSize="11"
                                                 Foreground="White"
                                                 Background="#3498DB"
                                                 Padding="6,2"
                                                 Margin="0,0,8,0"
-                                                Visibility="{Binding CategoryName, Converter={StaticResource NullToVisibilityConverter}}" />
+                                                Visibility="{Binding Name, Converter={StaticResource NullToVisibilityConverter}}" />
                                             <TextBlock
                                                 Text="{Binding ReminderTime, StringFormat='⏰ {0:MMM dd, HH:mm}'}"
                                                 FontSize="11"
@@ -487,6 +474,7 @@
                                         Margin="8,0"
                                         Background="Transparent"
                                         BorderThickness="1"
+                                        Cursor="Hand"
                                         BorderBrush="#DDD"
                                         FontSize="16"
                                         Command="{Binding DataContext.EditTodoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
@@ -532,6 +520,7 @@
                                         Height="36"
                                         Background="Transparent"
                                         BorderThickness="1"
+                                        Cursor="Hand"
                                         BorderBrush="#E74C3C"
                                         FontSize="16"
                                         Command="{Binding DataContext.DeleteTodoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"

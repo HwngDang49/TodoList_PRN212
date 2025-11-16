@@ -10,6 +10,7 @@ using TodoApp.DAL;
 using TodoApp.DAL.Entities;
 using TodoApp.DAL.Repositories;
 using TodoApp.UI.Command;
+using TodoApp.UI.Dialogs;
 using TodoApp.UI.Services;
 
 namespace TodoApp.UI.ViewModels
@@ -23,7 +24,7 @@ namespace TodoApp.UI.ViewModels
         private User _currentUser;
         private string _newTodoTitle;
         private string _currentCategoryName = "All Tasks";
-        private int? _selectedCategoryId;
+        private Guid? _selectedCategoryId;
         private ObservableCollection<Todo> _todoList;
         private ObservableCollection<Todo> _filteredTodos;
         private ObservableCollection<Category> _categories;
@@ -40,18 +41,17 @@ namespace TodoApp.UI.ViewModels
             FilteredTodos = new ObservableCollection<Todo>();
 
             InitializeCommands();
-        }
 
-        public TodoViewModel(NavigationService nav, User currentUser)
-        {
-            _nav = nav;
-            _currentUser = currentUser;
-
-            Todos = new ObservableCollection<Todo>();
-            Categories = new ObservableCollection<Category>();
-            FilteredTodos = new ObservableCollection<Todo>();
-
-            InitializeCommands();
+            // Check if user is not null before loading data
+            if (_currentUser != null)
+            {
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Error: User not found. Please login again.", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         #region Properties
@@ -127,17 +127,255 @@ namespace TodoApp.UI.ViewModels
 
         private void InitializeCommands()
         {
-            //AddCategoryCommand = new RelayCommand();
-            //ToggleTodoCommand = new RelayCommand();
-            //EditTodoCommand = new RelayCommand();
-            //DeleteTodoCommand = new RelayCommand();
-            //FilterByCategoryCommand = new RelayCommand();
-            //AddCategoryCommand = new RelayCommand();
+            AddTodoCommand = new RelayCommand(o => ExecuteAddTodo(), o => CanExecuteAddTodo());
+            ToggleTodoCommand = new RelayCommand(o => ExecuteToggleTodo(o as Todo));
+            EditTodoCommand = new RelayCommand(o => ExecuteEditTodo(o as Todo));
+            DeleteTodoCommand = new RelayCommand(o => ExecuteDeleteTodo(o as Todo));
+            FilterByCategoryCommand = new RelayCommand(o => ExecuteFilterByCategory(o));
+            AddCategoryCommand = new RelayCommand(o => ExecuteAddCategory());
             LogoutCommand = new RelayCommand(o => ExecuteLogout());
         }
         #endregion
 
         #region Command Handlers
+        /*
+        *  Load Data
+        */
+        private void LoadData() 
+        {
+            try
+            {
+                // Load data for current user
+                var todos = _todoService.GetTodos(_currentUser.UserId);
+                Todos.Clear();
+                foreach (var todo in todos)
+                {
+                    // Load category name if exists
+                    if (todo.CategoryId.HasValue)
+                    {
+                        var category = _categoryService.GetCategoryById(todo.CategoryId.Value);
+                        todo.CategoryName = category?.Name;
+                    }
+                    Todos.Add(todo);
+                }
+
+                // Load categories for current user
+                var categories = _categoryService.GetCategories(_currentUser.UserId);
+                Categories.Clear();
+                foreach (var category in categories)
+                {
+                    Categories.Add(category);
+                }
+
+                // Show all todos initially
+                FilterTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Can execute Add Todo
+        */
+        private bool CanExecuteAddTodo()
+        {
+            return !string.IsNullOrWhiteSpace(NewTodoTitle);
+        }
+
+        /*
+        *  Execute Add Todo
+        */
+        private void ExecuteAddTodo()
+        {
+            try
+            {
+                var newTodo = new Todo()
+                {
+                    TodoId = Guid.NewGuid(),
+                    UserId = _currentUser.UserId,
+                    Title = NewTodoTitle.Trim(),
+                    Description = string.Empty,
+                    IsCompleted = false,
+                    CategoryId = _selectedCategoryId,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now,
+                };
+
+                Todos.Add(newTodo);
+                FilterTodos();
+
+                // Clear Input
+                NewTodoTitle = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding todo: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Add Category
+        */
+        private void ExecuteAddCategory()
+        {
+            try
+            {
+                var dialog = new AddCategoryDialog();
+                if (dialog.ShowDialog() == true && !string.IsNullOrWhiteSpace(dialog.CategoryName))
+                {
+                    var newCategory = new Category
+                    {
+                        CategoryId = Guid.NewGuid(),
+                        UserId = _currentUser.UserId,
+                        Name = dialog.CategoryName.Trim(),
+                        CreatedAt = DateTime.Now
+                    };
+
+                    _categoryService.CreateCategory(newCategory);
+                    Categories.Add(newCategory);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding category: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Toggle Todo
+        */
+        private void ExecuteToggleTodo(Todo todo)
+        {
+            if (todo == null) return;
+
+            try
+            {
+                todo.IsCompleted = !todo.IsCompleted;
+                todo.UpdatedAt = DateTime.Now;
+
+                _todoService.UpdateTodo(todo);
+
+                // Trigger UI update
+                OnPropertyChanged(nameof(FilteredTodos));
+            }
+            catch (Exception ex)
+            {
+                // Revert on error
+                todo.IsCompleted = !todo.IsCompleted;
+                MessageBox.Show($"Error updating todo: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Edit Todo
+        */
+        private void ExecuteEditTodo(Todo todo)
+        {
+            if (todo == null) return;
+
+            try
+            {
+                var editDialog = new EditTodoDialog(todo, Categories.ToList());
+                if (editDialog.ShowDialog() == true)
+                {
+                    var editedTodo = editDialog.EditedTodo;
+
+                    // Update the todo in the service
+                    _todoService.UpdateTodo(editedTodo);
+
+                    // Update the todo in the collection
+                    var index = Todos.IndexOf(todo);
+                    if (index >= 0)
+                    {
+                        Todos[index] = editedTodo;
+                    }
+
+                    FilterTodos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating todo: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Delete Todo
+        */
+        private void ExecuteDeleteTodo(Todo todo)
+        {
+            if (todo == null) return;
+
+            try
+            {
+                var result = MessageBox.Show(
+                    $"Are you sure you want to delete '{todo.Title}'?",
+                    "Confirm Delete",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    _todoService.DeleteTodo(todo.TodoId);
+                    Todos.Remove(todo);
+                    FilterTodos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting todo: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Filter By Category
+        */
+        private void ExecuteFilterByCategory(object parameter)
+        {
+            if (parameter is string && parameter.ToString() == "All")
+            {
+                _selectedCategoryId = null;
+                CurrentCategoryName = "All Tasks";
+            }
+            else if (parameter is Guid categoryId)
+            {
+                _selectedCategoryId = categoryId;
+                var category = Categories.FirstOrDefault(c => c.CategoryId == categoryId);
+                CurrentCategoryName = category?.Name ?? "Unknown Category";
+            }
+
+            FilterTodos();
+        }
+
+        /*
+        *  Filter Todos
+        */
+        private void FilterTodos()
+        {
+            FilteredTodos.Clear();
+
+            var filtered = _selectedCategoryId.HasValue
+                ? Todos.Where(t => t.CategoryId == _selectedCategoryId.Value)
+                : Todos;
+
+            // Order by: incomplete first, then by creation date (newest first)
+            foreach (var todo in filtered.OrderBy(t => t.IsCompleted).ThenByDescending(t => t.CreatedAt))
+            {
+                FilteredTodos.Add(todo);
+            }
+        }
+
+        /*
+        *  Logout
+        */
         private void ExecuteLogout()
         {
             var result = MessageBox.Show(

@@ -9,7 +9,7 @@ namespace TodoApp.BLL.Interfaces
 {
     public interface ICategoryService
     {
-        Category CreateCategory(Guid userId, string name, DateTime createdAt);
+        Category CreateCategory(Category category);
         List<Category> GetCategories(Guid userId);
         Category GetCategoryById(Guid categoryId);
         bool UpdateCategory(Category category);

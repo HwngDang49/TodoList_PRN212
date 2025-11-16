@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using TodoApp.BLL.Services;
+using TodoApp.DAL;
+using TodoApp.DAL.Repositories;
 using TodoApp.UI.Command;
 using TodoApp.UI.Services;
 
@@ -14,6 +16,8 @@ namespace TodoApp.UI.ViewModels
     {
         private readonly NavigationService _nav;
         private readonly UserService _userService;
+        private readonly TodoService _todoService;
+        private readonly CategoryService _categoryService;
 
         private string _email;
         public string Email
@@ -37,31 +41,59 @@ namespace TodoApp.UI.ViewModels
             }
         }
 
-        public RelayCommand LoginCommand { get; set; }
-        public RelayCommand GoToSignUpCommand { get; set; }
-
         public LoginViewModel(NavigationService nav, UserService userService)
         {
             _nav = nav;
             _userService = userService;
+
+            // Initialize the services
+            var db = new TodoDbContext();
+            var todoRepo = new TodoRepository(db);
+            var categoryRepo = new CategoryRepository(db);
+
+            _todoService = new TodoService(todoRepo);
+            _categoryService = new CategoryService(categoryRepo);
 
             LoginCommand = new RelayCommand(o => Login());
             GoToSignUpCommand = new RelayCommand(o => _nav.NavigateTo(new SignUpViewModel(_nav, _userService)));
 
         }
 
+        #region Commands
+        public RelayCommand LoginCommand { get; set; }
+        public RelayCommand GoToSignUpCommand { get; set; }
+        #endregion
+
+        #region Properties
         private void Login()
         {
-            var user = _userService.Login(Email, Password);
-
-            if (user != null)
+            // Validate input
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
             {
-                _nav.NavigateTo(new TodoViewModel(_nav, user));
+                MessageBox.Show("Please enter both email and password.", "Validation Error",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
-            else
+            
+            try
             {
-                MessageBox.Show("Invalid email or password");
+                var user = _userService.Login(Email, Password);
+                if (user != null)
+                {
+                    _nav.NavigateTo(new TodoViewModel(_nav, user, _todoService, _categoryService));
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or password", "Login Failed",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Login error: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        #endregion
     }
 }

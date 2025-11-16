@@ -21,21 +21,21 @@ namespace TodoApp.BLL.Services
         /*
         *  Create new Category
         */
-        public Category CreateCategory(Guid userId, string name, DateTime createdAt)
+        public Category CreateCategory(Category category)
         {
-            if (string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(category.Name))
             {
                 throw new ArgumentNullException("Category name cannot be empty");
             }
 
-            var category = new Category()
+            var newCategory = new Category()
             {
                 CategoryId = Guid.NewGuid(),
-                Name = name,
-                CreatedAt = createdAt,
+                Name = category.Name,
+                CreatedAt = category.CreatedAt,
             };
 
-            return _repo.Create(category);
+            return _repo.Create(newCategory);
         }
 
         /*
