@@ -18,7 +18,13 @@
             DataType="{x:Type viewModels:SignUpViewModel}">
             <views:SignUpView />
         </DataTemplate>
-
+        
+        <!-- Todo View -->
+        <DataTemplate
+            DataType="{x:Type viewModels:TodoViewModel}">
+            <views:TodoView />
+        </DataTemplate>
+        
         <!-- Button -->
         <Style
             x:Key="Button"

@@ -8,10 +8,10 @@
     xmlns:vm="clr-namespace:TodoApp.UI.ViewModels"
     mc:Ignorable="d"
     Title="Todo's App"
-    Height="700"
-    Width="500"
+    Height="900"
+    Width="1450"
     WindowStartupLocation="CenterScreen"
-    ResizeMode="NoResize"
+    ResizeMode="CanResize"
     FontFamily="Cascadia Mono"
     Background="#f5f4f2">
     <Window.DataContext>

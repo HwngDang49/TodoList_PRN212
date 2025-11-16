@@ -30,7 +30,7 @@ namespace TodoApp.UI.ViewModels
 
             var userService = new UserService();
 
-            CurrentViewModel = new LoginViewModel(NavService, userService); 
+            CurrentViewModel = new LoginViewModel(NavService, userService);
         }
     }
 }
