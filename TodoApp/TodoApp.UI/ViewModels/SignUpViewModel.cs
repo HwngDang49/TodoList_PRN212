@@ -44,6 +44,7 @@ namespace TodoApp.UI.ViewModels
 
             var user = new User()
             {
+                UserId = Guid.NewGuid(),
                 Username = Username,
                 Email = Email,
                 PasswordHash = Password
