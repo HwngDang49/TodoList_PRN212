@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TodoApp.DAL.Entities;
 
@@ -10,8 +11,6 @@ public partial class Todo
     public Guid UserId { get; set; }
 
     public Guid? CategoryId { get; set; }
-
-    public string CategoryName { get; set; } = null!;
 
     public string Title { get; set; } = null!;
 
@@ -28,4 +27,7 @@ public partial class Todo
     public virtual Category? Category { get; set; }
 
     public virtual User User { get; set; } = null!;
+
+    [NotMapped]
+    public string CategoryName { get; set; } = null!;
 }

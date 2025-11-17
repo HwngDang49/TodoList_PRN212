@@ -142,7 +142,7 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Button
-                                        Content="{Binding Name}"
+                                        Content="{Binding CategoryName}"
                                         Tag="{Binding CategoryId}"
                                         Height="40"
                                         Margin="0,0,0,8"
@@ -450,13 +450,13 @@
                                             Orientation="Horizontal"
                                             Margin="0,4,0,0">
                                             <TextBlock
-                                                Text="{Binding Name}"
+                                                Text="{Binding CategoryName}"
                                                 FontSize="11"
                                                 Foreground="White"
                                                 Background="#3498DB"
                                                 Padding="6,2"
                                                 Margin="0,0,8,0"
-                                                Visibility="{Binding Name, Converter={StaticResource NullToVisibilityConverter}}" />
+                                                Visibility="{Binding CategoryName, Converter={StaticResource NullToVisibilityConverter}}" />
                                             <TextBlock
                                                 Text="{Binding ReminderTime, StringFormat='⏰ {0:MMM dd, HH:mm}'}"
                                                 FontSize="11"
