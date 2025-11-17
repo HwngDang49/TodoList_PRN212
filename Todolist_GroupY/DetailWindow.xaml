@@ -1,0 +1,88 @@
+﻿<Window x:Class="Todolist_GroupY.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Todolist_GroupY"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+Title="Chi tiết việc" Height="420" Width="572" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        
+        Background="{StaticResource BackgroundColor}" 
+        Loaded="Window_Loaded_1" >
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Tiêu đề" Grid.Row="0" Foreground="{StaticResource TextColor}"/>
+        <TextBox x:Name="TitleTextBox" Grid.Row="2" Height="32"/>
+
+        <StackPanel Grid.Row="4">
+            <TextBlock Text="Mô tả" Foreground="{StaticResource TextColor}"/>
+            <TextBox x:Name="DescTextBox" Height="100" AcceptsReturn="True" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <StackPanel Width="250" Margin="0,0,16,0">
+                <TextBlock Text="Hạn" Foreground="{StaticResource TextColor}"/>
+                <xctk:DateTimePicker x:Name="DueDatePicker"
+                                     Background="{StaticResource SecondaryColor}"
+                                     Foreground="{StaticResource TextColor}"
+                                     BorderBrush="{StaticResource PrimaryColor}"
+                                     BorderThickness="1"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
+            </StackPanel>
+
+            <StackPanel Width="250">
+                <TextBlock Text="Nhắc lúc" Foreground="{StaticResource TextColor}"/>
+                <xctk:DateTimePicker x:Name="ReminderDatePicker"
+                                     Background="{StaticResource SecondaryColor}"
+                                     Foreground="{StaticResource TextColor}"
+                                     BorderBrush="{StaticResource PrimaryColor}"
+                                     BorderThickness="1"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Right">
+            <CheckBox x:Name="CompletedCheckBox" Content="Đã hoàn thành" 
+                      VerticalAlignment="Center" Margin="0,0,20,0"
+                      Foreground="{StaticResource TextColor}"/>
+
+            <Button Content="Lưu" x:Name="SaveButton" Width="100" 
+                    Style="{StaticResource ActionButtonStyle}"
+                    Background="{StaticResource PrimaryColor}" Foreground="{StaticResource SecondaryColor}"
+                    BorderBrush="{StaticResource SecondaryColor}"
+                    Click="SaveButton_Click" Height="36"/>
+
+            <Button Content="Hủy" x:Name="CancelButton" Width="100" 
+                    Style="{StaticResource ActionButtonStyle}"
+                    Background="#D83A3A" 
+                    Foreground="White"
+                    BorderBrush="#D83A3A"
+                    Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="Todolist_GroupY.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Todolist_GroupY"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="481" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        
+        Background="{StaticResource BackgroundColor}">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="WELCOME BACK" 
+               FontSize="24" 
+               FontWeight="Bold" 
+               Foreground="{StaticResource PrimaryColor}" 
+               HorizontalAlignment="Center" 
+               Grid.Row="0"/>
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Email" Margin="0,0,0,4" 
+                   Foreground="{StaticResource TextColor}" 
+                   FontWeight="SemiBold"/>
+            <TextBox x:Name="EmailTextBox" Height="38" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="4">
+            <Label Content="Password" Margin="0,0,0,4" 
+                   Foreground="{StaticResource TextColor}" 
+                   FontWeight="SemiBold"/>
+            <PasswordBox x:Name="PasswordBox" Height="38" />
+        </StackPanel>
+
+        <CheckBox x:Name="RememberCheckBox" Grid.Row="6" Content="Remember me" 
+                  Foreground="{StaticResource TextColor}" 
+                  Checked="RememberCheckBox_Checked" 
+                  VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
+
+            <Button x:Name="LoginButton" 
+                    Content="Sign in" 
+                    Width="120" 
+                    Height="40" 
+                    Style="{StaticResource ActionButtonStyle}" 
+                    Background="{StaticResource PrimaryColor}" Foreground="{StaticResource SecondaryColor}"
+BorderBrush="{StaticResource SecondaryColor}"
+                    Click="LoginButton_Click"
+                    Margin="0,0,10,0"/>
+
+            <Button x:Name="RegisterButton" 
+                    Content="Sign up" 
+                    Width="120" 
+                    Height="40" 
+                    Style="{StaticResource ActionButtonStyle}"
+                    Background="{StaticResource SecondaryColor}" 
+                    Foreground="{StaticResource TextColor}"
+                    Click="RegisterButton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

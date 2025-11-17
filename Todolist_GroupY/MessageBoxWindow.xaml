@@ -1,0 +1,62 @@
+﻿<Window x:Class="Todolist_GroupY.MessageBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Todolist_GroupY"
+        mc:Ignorable="d"
+        Title="Thông Báo Ứng Dụng" 
+        Height="200" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStyle="None" 
+        BorderBrush="{StaticResource PrimaryColor}" 
+        BorderThickness="2"
+        Background="{StaticResource BackgroundColor}">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="{StaticResource PrimaryColor}" Padding="5" CornerRadius="3">
+            <TextBlock x:Name="TitleText" 
+                       Text="{Binding Title, RelativeSource={RelativeSource AncestorType=Window}}" 
+                       Foreground="{StaticResource SecondaryColor}" 
+                       FontWeight="Bold" 
+                       FontSize="16"
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <TextBlock x:Name="MessageText" 
+                   Grid.Row="1" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap"
+                   Margin="0,15,0,15"
+                   FontSize="14"
+                   Foreground="{StaticResource TextColor}"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="PrimaryButton" 
+                    Content="OK" 
+                    Style="{StaticResource ActionButtonStyle}" 
+                    Background="{StaticResource PrimaryColor}" Foreground="{StaticResource SecondaryColor}"
+                    BorderBrush="{StaticResource SecondaryColor}"
+                    MinWidth="80" 
+                    Click="Button_Click" Height="26"/>
+
+            <Button x:Name="SecondaryButton" 
+                    Content="Hủy" 
+                    Style="{StaticResource ActionButtonStyle}" 
+                    Background="{StaticResource SecondaryColor}" 
+                    Foreground="{StaticResource TextColor}"
+                    MinWidth="80" 
+                    Margin="10,0,0,0"
+                    Click="Button_Click" Height="28"/>
+        </StackPanel>
+    </Grid>
+</Window>
