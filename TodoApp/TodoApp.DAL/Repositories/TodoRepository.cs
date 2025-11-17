@@ -73,6 +73,7 @@ namespace TodoApp.DAL.Repositories
         */
         public bool Update(Todo todo)
         {
+            _db = new();
             _db.Todos.Update(todo);
             _db.SaveChanges();
             return true;

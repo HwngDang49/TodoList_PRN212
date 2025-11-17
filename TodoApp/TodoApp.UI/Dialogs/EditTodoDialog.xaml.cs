@@ -35,6 +35,8 @@ namespace TodoApp.UI.Dialogs
 
             _orginalTodo = todo;
             _categories = categories;
+
+            LoadData();
         }
 
         private void LoadData()

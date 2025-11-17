@@ -238,11 +238,6 @@ namespace TodoApp.UI.ViewModels
                         CreatedAt = DateTime.Now
                     };
 
-                    // Debug output
-                    System.Diagnostics.Debug.WriteLine($"Creating category name: {newCategory.Name}");
-                    System.Diagnostics.Debug.WriteLine($"Creating userId: {newCategory.UserId}");
-                    System.Diagnostics.Debug.WriteLine($"Creating Category Id: {newCategory.CategoryId}");
-
                     _categoryService.CreateCategory(newCategory);
                     Categories.Add(newCategory);
                 }
