@@ -16,7 +16,7 @@ namespace TodoApp.UI.ViewModels
         private readonly NavigationService _nav;
         private readonly UserService _userService;
 
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
 
@@ -34,7 +34,7 @@ namespace TodoApp.UI.ViewModels
 
         private void Register()
         {
-            if (string.IsNullOrWhiteSpace(UserName) ||
+            if (string.IsNullOrWhiteSpace(Username) ||
                     string.IsNullOrWhiteSpace(Email) ||
                     string.IsNullOrWhiteSpace(Password))
             {
@@ -44,7 +44,7 @@ namespace TodoApp.UI.ViewModels
 
             var user = new User()
             {
-                Username = UserName,
+                Username = Username,
                 Email = Email,
                 PasswordHash = Password
             };
