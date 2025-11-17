@@ -13,6 +13,6 @@ namespace TodoApp.BLL.Interfaces
         List<Category> GetCategories(Guid userId);
         Category GetCategoryById(Guid categoryId);
         bool UpdateCategory(Category category);
-        bool DeleteCategory(Guid categoryId);
+        bool DeleteCategory(Category category);
     }
 }

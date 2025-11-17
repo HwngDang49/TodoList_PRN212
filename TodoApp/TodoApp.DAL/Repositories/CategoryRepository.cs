@@ -29,9 +29,9 @@ namespace TodoApp.DAL.Repositories
         /*
         *  Delete
         */
-        public bool Delete(Guid id)
+        public bool Delete(Category category)
         {
-            _db.Remove(id);
+            _db.Remove(category);
             _db.SaveChanges();
             return true;
         }

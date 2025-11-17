@@ -7,8 +7,8 @@
     xmlns:local="clr-namespace:TodoApp.UI.Views"
     xmlns:converters="clr-namespace:TodoApp.UI.Converters"
     mc:Ignorable="d"
-    d:DesignHeight="900"
-    d:DesignWidth="1450">
+    d:DesignHeight="750"
+    d:DesignWidth="1050">
 
     <UserControl.Resources>
         <converters:NullToVisibilityConverter

@@ -13,7 +13,7 @@ namespace TodoApp.DAL.Repositories
         List<T> GetAll();
         T Create(T entity);
         bool Update(T entity);
-        bool Delete(Guid id);
+        bool Delete(T entity);
         void DeleteAll();
     }
 }

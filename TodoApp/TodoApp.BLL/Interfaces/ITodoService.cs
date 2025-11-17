@@ -9,11 +9,11 @@ namespace TodoApp.BLL.Interfaces
 {
     public interface ITodoService
     {
-        Todo CreateTodo(Guid userId, Guid categoryId, string title, string description, bool isCompleted, DateTime ReminderTime, DateTime createdAt, DateTime updatedAt);
+        Todo CreateTodo(Todo todo);
         List<Todo> GetTodos(Guid userId);
         Todo GetTodoById(Guid id);
         bool UpdateTodo(Todo todo);
-        bool DeleteTodo(Guid todoId);
+        bool DeleteTodo(Todo todo);
         bool ToggleCompleted(Guid todoId);
     }
 }

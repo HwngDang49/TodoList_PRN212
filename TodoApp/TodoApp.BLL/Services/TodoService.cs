@@ -21,20 +21,20 @@ namespace TodoApp.BLL.Services
         /*
         *  Create Todo
         */
-        public Todo CreateTodo(Guid userId, Guid categoryId, string title, string description, bool isCompleted, DateTime ReminderTime, DateTime createdAt, DateTime updatedAt)
+        public Todo CreateTodo(Todo todo)
         {
-            if (string.IsNullOrWhiteSpace(title))
+            if (string.IsNullOrWhiteSpace(todo.Title))
             {
                 throw new Exception("Todo title cannot be empty");
             }
 
-            var todo = new Todo()
+            var newTodo = new Todo()
             {
                 TodoId = Guid.NewGuid(),
-                UserId = userId,
-                CategoryId = categoryId,
-                Title = title,
-                Description = description,
+                UserId = todo.UserId,
+                CategoryId = todo.CategoryId,
+                Title = todo.Title,
+                Description = todo.Description,
                 IsCompleted = false,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now
@@ -46,16 +46,16 @@ namespace TodoApp.BLL.Services
         /*
         *  Delete Todo
         */
-        public bool DeleteTodo(Guid todoId)
+        public bool DeleteTodo(Todo todo)
         {
-            var todo = _repo.GetById(todoId);
-            if (todo == null)
+            var existingTodo = _repo.GetById(todo.TodoId);
+            if (existingTodo == null)
             {
                 return false;
             }
             else
             {
-                return _repo.Delete(todo.TodoId);
+                return _repo.Delete(existingTodo);
             } 
         }
 

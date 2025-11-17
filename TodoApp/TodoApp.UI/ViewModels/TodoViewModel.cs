@@ -204,6 +204,9 @@ namespace TodoApp.UI.ViewModels
                     UpdatedAt = DateTime.Now,
                 };
 
+                // Add Todo to database
+                _todoService.CreateTodo(newTodo);
+
                 Todos.Add(newTodo);
                 FilterTodos();
 
@@ -226,7 +229,7 @@ namespace TodoApp.UI.ViewModels
             {
                 var dialog = new AddCategoryDialog();
                 if (dialog.ShowDialog() == true && !string.IsNullOrWhiteSpace(dialog.CategoryName))
-                {
+                {   
                     var newCategory = new Category
                     {
                         CategoryId = Guid.NewGuid(),
@@ -235,9 +238,34 @@ namespace TodoApp.UI.ViewModels
                         CreatedAt = DateTime.Now
                     };
 
+                    // Debug output
+                    System.Diagnostics.Debug.WriteLine($"Creating category name: {newCategory.Name}");
+                    System.Diagnostics.Debug.WriteLine($"Creating userId: {newCategory.UserId}");
+                    System.Diagnostics.Debug.WriteLine($"Creating Category Id: {newCategory.CategoryId}");
+
                     _categoryService.CreateCategory(newCategory);
                     Categories.Add(newCategory);
                 }
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex)
+            {
+                var sb = new StringBuilder();
+                sb.AppendLine("Database Error Details:");
+                sb.AppendLine(ex.Message);
+
+                if (ex.InnerException != null)
+                {
+                    sb.AppendLine($"\nInner Exception: {ex.InnerException.Message}");
+
+                    if (ex.InnerException.InnerException != null)
+                    {
+                        sb.AppendLine($"\nDatabase Error: {ex.InnerException.InnerException.Message}");
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine(sb.ToString());
+                MessageBox.Show(sb.ToString(), "Database Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
@@ -323,7 +351,7 @@ namespace TodoApp.UI.ViewModels
 
                 if (result == MessageBoxResult.Yes)
                 {
-                    _todoService.DeleteTodo(todo.TodoId);
+                    _todoService.DeleteTodo(todo);
                     Todos.Remove(todo);
                     FilterTodos();
                 }

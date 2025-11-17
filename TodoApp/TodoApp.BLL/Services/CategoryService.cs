@@ -31,6 +31,7 @@ namespace TodoApp.BLL.Services
             var newCategory = new Category()
             {
                 CategoryId = Guid.NewGuid(),
+                UserId = category.UserId,
                 Name = category.Name,
                 CreatedAt = category.CreatedAt,
             };
@@ -41,9 +42,14 @@ namespace TodoApp.BLL.Services
         /*
         *  Delete Category
         */
-        public bool DeleteCategory(Guid categoryId)
+        public bool DeleteCategory(Category category)
         {
-            return _repo.Delete(categoryId);
+            var existingCategory = _repo.GetById(category.CategoryId);
+            if (existingCategory != null)
+            {
+                return _repo.Delete(existingCategory);
+            }
+            else { return false; }
         }
 
         /*
