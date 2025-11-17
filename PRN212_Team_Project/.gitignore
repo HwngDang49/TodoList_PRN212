@@ -3,13 +3,34 @@
 *.vsidx
 *.vsidx-shm
 *.vsidx-wal
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio 2015/2017 cache/options directory
+.vs/
+
+## Visual Studio Code
+.vscode/
+
+## User-specific files
+*.rsuser
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
-
-## Visual Studio Code
-.vscode/
 
 ## Build results
 [Dd]ebug/
@@ -99,6 +120,13 @@ _ReSharper*/
 .idea/
 *.sln.iml
 
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
 ## Mono auto generated files
 mono_crash.*
 
@@ -115,18 +143,3 @@ $RECYCLE.BIN/
 ## Mac desktop service store files
 .DS_Store
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# Others
-~$*
-*~
-CodeCoverage/
-
-# MSBuild Binary and Structured Log
-*.binlog
-
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml

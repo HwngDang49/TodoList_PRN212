@@ -1,0 +1,58 @@
+﻿<Window x:Class="Todolist_GroupY.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Todolist_GroupY"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+Title="Chi tiết việc" Height="420" Width="572" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#B2DAE4" Loaded="Window_Loaded_1" >
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Tiêu đề"/>
+        <TextBox x:Name="TitleTextBox" Grid.Row="2" Height="28"/>
+
+        <StackPanel Grid.Row="4">
+            <TextBlock Text="Mô tả"/>
+            <TextBox x:Name="DescTextBox" Height="140" AcceptsReturn="True" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <StackPanel Width="240" Margin="0,0,8,0">
+                <TextBlock Text="Hạn"/>
+                <xctk:DateTimePicker x:Name="DueDatePicker"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
+            </StackPanel>
+            <StackPanel Width="240">
+                <TextBlock Text="Nhắc lúc"/>
+                <xctk:DateTimePicker x:Name="ReminderDatePicker"
+                                     Format="Custom"
+                                     FormatString="dd/MM/yyyy HH:mm"
+                                     TimeFormat="Custom"
+                                     TimeFormatString="HH:mm"
+                                     ShowButtonSpinner="False"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
+            <CheckBox x:Name="CompletedCheckBox" Content="Đã hoàn thành" VerticalAlignment="Center" Margin="0,0,16,0"/>
+            <Button Content="Lưu" x:Name="SaveButton" Width="90" Margin="0,0,8,0"  Background="#30BE71" Foreground="#FFFFFF" Click="SaveButton_Click"/>
+            <Button Content="Hủy" x:Name="CancelButton" Width="90"  Background="#FF0000" Foreground="#FFFFFF"/>
+        </StackPanel>
+    </Grid>
+</Window>
