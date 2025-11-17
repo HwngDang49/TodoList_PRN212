@@ -48,7 +48,15 @@ namespace TodoApp.BLL.Services
         */
         public bool DeleteTodo(Guid todoId)
         {
-            return _repo.Delete(todoId);
+            var todo = _repo.GetById(todoId);
+            if (todo == null)
+            {
+                return false;
+            }
+            else
+            {
+                return _repo.Delete(todo.TodoId);
+            } 
         }
 
         /*

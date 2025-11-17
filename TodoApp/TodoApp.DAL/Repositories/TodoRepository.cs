@@ -21,7 +21,6 @@ namespace TodoApp.DAL.Repositories
         */
         public Todo Create(Todo todo)
         {
-            _db = new();
             _db.Todos.Add(todo);
             _db.SaveChanges();
             return todo;
@@ -32,7 +31,6 @@ namespace TodoApp.DAL.Repositories
         */
         public bool Delete(Guid id)
         {
-            _db = new();
             _db.Remove(id);
             _db.SaveChanges();
             return true;
@@ -51,7 +49,6 @@ namespace TodoApp.DAL.Repositories
         */
         public List<Todo> GetAll()
         {
-            _db = new();
             return _db.Todos.ToList();
         }
 
@@ -60,7 +57,6 @@ namespace TodoApp.DAL.Repositories
         */
         public List<Todo> GetByUserId(Guid userId)
         {
-            _db = new();
             return _db.Todos.Where(t => t.UserId == userId).ToList();
         }
 
@@ -69,7 +65,6 @@ namespace TodoApp.DAL.Repositories
         */
         public Todo? GetById(Guid id)
         {
-            _db = new();
             return _db.Todos.FirstOrDefault(x => x.TodoId == id);
         }
 
@@ -78,7 +73,6 @@ namespace TodoApp.DAL.Repositories
         */
         public bool Update(Todo todo)
         {
-            _db = new();
             _db.Todos.Update(todo);
             _db.SaveChanges();
             return true;

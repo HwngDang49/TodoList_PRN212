@@ -142,7 +142,7 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Button
-                                        Content="{Binding CategoryName}"
+                                        Content="{Binding Name}"
                                         Tag="{Binding CategoryId}"
                                         Height="40"
                                         Margin="0,0,0,8"
