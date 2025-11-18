@@ -57,6 +57,7 @@ namespace TodoApp.UI.Dialogs
                 Name = c.Name,
             }));
 
+            // Set the ItemsSource directly instead of relying on binding
             CategoryComboBox.ItemsSource = categoryList;
 
             // Select current category

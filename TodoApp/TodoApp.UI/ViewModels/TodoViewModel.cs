@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using TodoApp.BLL.Services;
 using TodoApp.DAL;
 using TodoApp.DAL.Entities;
@@ -117,13 +118,14 @@ namespace TodoApp.UI.ViewModels
         #endregion
 
         #region Commands
-        public RelayCommand AddTodoCommand { get; private set; }
-        public RelayCommand ToggleTodoCommand { get; private set; }
-        public RelayCommand EditTodoCommand { get; private set; }
-        public RelayCommand DeleteTodoCommand { get; private set; }
-        public RelayCommand FilterByCategoryCommand { get; private set; }
-        public RelayCommand AddCategoryCommand { get; private set; }
-        public RelayCommand LogoutCommand { get; private set; }
+        public ICommand AddTodoCommand { get; private set; }
+        public ICommand ToggleTodoCommand { get; private set; }
+        public ICommand EditTodoCommand { get; private set; }
+        public ICommand DeleteTodoCommand { get; private set; }
+        public ICommand FilterByCategoryCommand { get; private set; }
+        public ICommand AddCategoryCommand { get; private set; }
+        public RelayCommand<Guid> RemoveCategoryCommand { get; private set; }
+        public ICommand LogoutCommand { get; private set; }
 
         private void InitializeCommands()
         {
@@ -133,6 +135,7 @@ namespace TodoApp.UI.ViewModels
             DeleteTodoCommand = new RelayCommand(o => ExecuteDeleteTodo(o as Todo));
             FilterByCategoryCommand = new RelayCommand(o => ExecuteFilterByCategory(o));
             AddCategoryCommand = new RelayCommand(o => ExecuteAddCategory());
+            RemoveCategoryCommand = new RelayCommand<Guid>(ExecuteRemoveCategory); // requires RelayCommand<T>
             LogoutCommand = new RelayCommand(o => ExecuteLogout());
         }
         #endregion
@@ -204,6 +207,13 @@ namespace TodoApp.UI.ViewModels
                     UpdatedAt = DateTime.Now,
                 };
 
+                // Load category name if a category is selected
+                if (newTodo.CategoryId.HasValue)
+                {
+                    var category = _categoryService.GetCategoryById(newTodo.CategoryId.Value);
+                    newTodo.CategoryName = category?.Name;
+                }
+
                 // Add Todo to database
                 _todoService.CreateTodo(newTodo);
 
@@ -240,6 +250,9 @@ namespace TodoApp.UI.ViewModels
 
                     _categoryService.CreateCategory(newCategory);
                     Categories.Add(newCategory);
+
+                    // Show all todos initially
+                    FilterTodos();
                 }
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException ex)
@@ -278,20 +291,15 @@ namespace TodoApp.UI.ViewModels
 
             try
             {
-                todo.IsCompleted = !todo.IsCompleted;
                 todo.UpdatedAt = DateTime.Now;
 
                 _todoService.UpdateTodo(todo);
 
-                // Trigger UI update
                 OnPropertyChanged(nameof(FilteredTodos));
             }
             catch (Exception ex)
             {
-                // Revert on error
-                todo.IsCompleted = !todo.IsCompleted;
-                MessageBox.Show($"Error updating todo: {ex.Message}", "Error",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error updating todo: {ex.Message}");
             }
         }
 
@@ -304,19 +312,41 @@ namespace TodoApp.UI.ViewModels
 
             try
             {
-                var editDialog = new EditTodoDialog(todo, Categories.ToList());
+                // Reload categories from database to ensure we have the latest
+                var categories = _categoryService.GetCategories(_currentUser.UserId);
+
+                var editDialog = new EditTodoDialog(todo, categories.ToList());
                 if (editDialog.ShowDialog() == true)
                 {
                     var editedTodo = editDialog.EditedTodo;
 
+                    // Load category name if exists
+                    if (editedTodo.CategoryId.HasValue)
+                    {
+                        var category = categories.FirstOrDefault(c => c.CategoryId == editedTodo.CategoryId.Value);
+                        editedTodo.CategoryName = category?.Name;
+                    }
+                    else
+                    {
+                        editedTodo.CategoryName = null;
+                    }
+
                     // Update the todo in the service
                     _todoService.UpdateTodo(editedTodo);
 
-                    // Update the todo in the collection
-                    var index = Todos.IndexOf(todo);
-                    if (index >= 0)
+                    // IMPORTANT: Update the existing todo object in the collection
+                    // Find the original todo in the Todos collection
+                    var originalTodo = Todos.FirstOrDefault(t => t.TodoId == todo.TodoId);
+                    if (originalTodo != null)
                     {
-                        Todos[index] = editedTodo;
+                        // Update all properties
+                        originalTodo.Title = editedTodo.Title;
+                        originalTodo.Description = editedTodo.Description;
+                        originalTodo.CategoryId = editedTodo.CategoryId;
+                        originalTodo.CategoryName = editedTodo.CategoryName;
+                        originalTodo.ReminderTime = editedTodo.ReminderTime;
+                        originalTodo.UpdatedAt = editedTodo.UpdatedAt;
+                        originalTodo.IsCompleted = editedTodo.IsCompleted;
                     }
 
                     FilterTodos();
@@ -355,6 +385,144 @@ namespace TodoApp.UI.ViewModels
             {
                 MessageBox.Show($"Error deleting todo: {ex.Message}", "Error",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /*
+        *  Execute Remove Category
+        */
+        private void ExecuteRemoveCategory(Guid categoryId)
+        {
+            var category = Categories.FirstOrDefault(c => c.CategoryId == categoryId);
+            if (category == null) return;
+
+            // Verify this category belongs to the current user
+            if (category.UserId != _currentUser.UserId)
+            {
+                MessageBox.Show("You don't have permission to delete this category.", "Access Denied",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // IMPORTANT: Check ALL todos belonging to THIS USER that have this category
+            var affectedTodos = Todos
+                .Where(t => t.UserId == _currentUser.UserId &&
+                            t.CategoryId.HasValue &&
+                            t.CategoryId.Value == categoryId)
+                .ToList();
+
+            // Show appropriate confirmation message
+            MessageBoxResult result;
+
+            if (affectedTodos.Any())
+            {
+                result = MessageBox.Show(
+                    $"Category '{category.Name}' has {affectedTodos.Count} todo(s) assigned to it.\n\n" +
+                    "Click YES to delete the category and remove it from all todos.\n" +
+                    "Click NO to cancel.",
+                    "Confirm Delete",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+            }
+            else
+            {
+                result = MessageBox.Show(
+                    $"Delete category '{category.Name}'?",
+                    "Confirm",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+            }
+
+            // If user clicked No, exit
+            if (result != MessageBoxResult.Yes)
+                return;
+
+            try
+            {
+                // Step 1: Update each affected todo to remove the category reference
+                // CRITICAL: Do this in a loop with proper error handling
+                int updatedCount = 0;
+                foreach (var todo in affectedTodos)
+                {
+                    try
+                    {
+                        // Update the in-memory object
+                        todo.CategoryId = null;
+                        todo.CategoryName = null;
+                        todo.UpdatedAt = DateTime.Now;
+
+                        // Save to database immediately
+                        _todoService.UpdateTodo(todo);
+                        updatedCount++;
+
+                        System.Diagnostics.Debug.WriteLine($"Updated todo: {todo.Title}, CategoryId is now: {todo.CategoryId}");
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Failed to update todo {todo.Title}: {ex.Message}");
+                        throw new Exception($"Failed to update todo '{todo.Title}': {ex.Message}", ex);
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine($"Successfully updated {updatedCount} todos");
+
+                // Step 2: Force a small delay to ensure database commits are complete
+                // This is a workaround for potential Entity Framework tracking issues
+                System.Threading.Thread.Sleep(100);
+
+                // Step 3: Now try to delete the category
+                try
+                {
+                    _categoryService.DeleteCategory(category);
+                    System.Diagnostics.Debug.WriteLine($"Successfully deleted category: {category.Name}");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Failed to delete category: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"Inner exception: {ex.InnerException?.Message}");
+
+                    // If deletion fails, it might be due to lingering foreign key references
+                    MessageBox.Show(
+                        $"Failed to delete category from database.\n\n" +
+                        $"Error: {ex.Message}\n\n" +
+                        $"Details: {ex.InnerException?.Message}\n\n" +
+                        $"The todos have been updated. Please try deleting the category again.",
+                        "Database Error",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+
+                    // Reload to resync
+                    LoadData();
+                    return;
+                }
+
+                // Step 4: Remove from UI collection only after successful database deletion
+                Categories.Remove(category);
+
+                // Step 5: Refresh the filtered todos
+                FilterTodos();
+
+                // Show success message
+                string successMsg = affectedTodos.Any()
+                    ? $"Category deleted successfully.\n{affectedTodos.Count} todo(s) updated."
+                    : "Category deleted successfully.";
+
+                MessageBox.Show(successMsg, "Success",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error in ExecuteRemoveCategory: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+
+                MessageBox.Show(
+                    $"Error deleting category:\n{ex.Message}",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+
+                // Reload data to resync with database
+                LoadData();
             }
         }
 
