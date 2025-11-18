@@ -1,0 +1,125 @@
+﻿<Window x:Class="Todolist_GroupY.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Todolist_GroupY"
+        mc:Ignorable="d"
+        Title="TodoList - Notes" Height="600" Width="820" WindowStartupLocation="CenterScreen" 
+        Icon="/Assets/icon.ico"
+        Background="#333333"  Foreground="{StaticResource TextColor}"
+        Loaded="Window_Loaded">
+
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Top" Padding="12" 
+                Background="{StaticResource SecondaryColor}"  BorderBrush="{StaticResource PrimaryColor}" 
+                BorderThickness="0,0,0,2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="220"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Label Content="Todo App" FontSize="18" FontWeight="Bold" Margin="0,0,8,0" 
+                           Foreground="{StaticResource PrimaryColor}"/>
+
+                    <Label Content="|" Margin="8,0,8,0" Foreground="{StaticResource TextColor}"/>
+                    <Label Content="Hôm nay:" Margin="0,0,4,0" Foreground="{StaticResource TextColor}"/>
+                    <Label x:Name="TodayLabel" Content="{Binding TodayText}" Foreground="{StaticResource TextColor}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0"/>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0">
+                    <DatePicker x:Name="FilterDatePicker" Width="150" Margin="0,0,10,0"/>
+                    <CheckBox x:Name="ShowCompletedCheckBox" Content="Hiện đã hoàn thành" 
+                              Checked="ShowCompletedCheckBox_Checked" Unchecked="ShowCompletedCheckBox_Unchecked"
+                              Foreground="{StaticResource TextColor}"/>
+                </StackPanel>
+
+                <DockPanel Grid.Column="3" VerticalAlignment="Center">
+                    <TextBox x:Name="SearchTextBox" Height="30" VerticalContentAlignment="Center" TextChanged="SearchTextBox_TextChanged" />
+                </DockPanel>
+            </Grid>
+        </Border>
+
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <DockPanel Grid.Column="0">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,8">
+
+                    <Button Content="Thêm" x:Name="CreateButton" Style="{StaticResource ActionButtonStyle}" 
+                            Background="{StaticResource PrimaryColor}" Foreground="{StaticResource SecondaryColor}"
+                            BorderBrush="{StaticResource SecondaryColor}"
+                            Click="CreateButton_Click" Width="53" Height="24"/>
+
+                    <Button Content="Sửa" x:Name="UpdateButton" Style="{StaticResource ActionButtonStyle}" 
+                            Background="{StaticResource PrimaryColor}" Foreground="{StaticResource SecondaryColor}"
+                            BorderBrush="{StaticResource SecondaryColor}"
+                            Click="UpdateButton_Click"
+                            Width="53" Height="24"/>
+
+                    <Button Content="Xóa" x:Name="DeleteButton" Style="{StaticResource ActionButtonStyle}" 
+                            Background="#D83A3A" Foreground="White" BorderBrush="#D83A3A"
+                            Click="DeleteButton_Click"
+                            Width="53" Height="24"/>
+
+                    <Button Content="Chi Tiết" x:Name="ViewDetailButton" Style="{StaticResource ActionButtonStyle}" 
+                            Background="{StaticResource SecondaryColor}" Foreground="{StaticResource TextColor}"
+                            BorderBrush="{StaticResource PrimaryColor}"
+                            Click="ViewDetailButton_Click_1"
+                            Width="53" Height="24"/>
+                </StackPanel>
+
+                <DataGrid x:Name="TodoDataGrid" AutoGenerateColumns="False" 
+                          Background="#333333" 
+                          Foreground="{StaticResource TextColor}"
+                          BorderBrush="{StaticResource PrimaryColor}"
+                          BorderThickness="1"
+                          HeadersVisibility="Column"
+                          RowDetailsVisibilityMode="VisibleWhenSelected">
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+                            <Setter Property="Foreground" Value="{StaticResource SecondaryColor}"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Padding" Value="8,5"/>
+                            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource SecondaryColor}"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <Setter Property="Background" Value="#333333"/>
+                            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+                                    <Setter Property="Foreground" Value="{StaticResource SecondaryColor}"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#555555"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Tiêu đề" Width="*" Binding="{Binding Title}" />
+                        <DataGridTextColumn Header="Hạn" Width="Auto" Binding="{Binding DueDate, StringFormat='dd/MM/yyyy HH:mm'}" />
+                        <DataGridTextColumn Header="Nhắc" Width="Auto" Binding="{Binding ReminderTime, StringFormat='dd/MM/yyyy HH:mm'}" />
+                        <DataGridCheckBoxColumn Header="Xong" Width="50" Binding="{Binding IsCompleted}" IsReadOnly="True" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>
